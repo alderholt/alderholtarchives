@@ -335,13 +335,13 @@
 
 
     .content-item figcaption {
-        font-size: 1.3em;
+        font-size: 1.2em;
         color: #555;
         font-style: italic;
     }
     .content-item p {
-        margin-bottom: 1em;
-        font-size: 1.2em;
+        margin-bottom: 1.2em;
+        font-size: 1.3em;
     }
     .content-item blockquote {
         background: #f0f0f0;
@@ -389,7 +389,17 @@
 
         .larger-text {
           font-size: 1.1em; /* Adjust the size as needed */
-        }         
+        }
+
+        .content-item figcaption {
+            font-size: 1.4em;
+            color: #555;
+            font-style: italic;
+        }
+        .content-item p {
+            margin-bottom: 1.4em;
+            font-size: 1.3em;
+        }             
     } 
 
     @media (max-width: 768px) {
@@ -438,6 +448,17 @@
         .cf-turnstile {
             width: 200px; 
         }
+
+        .content-item figcaption {
+            font-size: 1.4em;
+            color: #555;
+            font-style: italic;
+        }
+        .content-item p {
+            margin-bottom: 1.5em;
+            font-size: 1.3em;
+        }
+
     }  
 /* end media queries */
 
