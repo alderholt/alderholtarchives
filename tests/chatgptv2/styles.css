@@ -392,13 +392,13 @@
         }
 
         .content-item figcaption {
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #555;
             font-style: italic;
         }
         .content-item p {
-            margin-bottom: 1.4em;
-            font-size: 1.3em;
+            margin-bottom: 1.3em;
+            font-size: 1.4em;            
         }             
     } 
 
@@ -450,13 +450,13 @@
         }
 
         .content-item figcaption {
-            font-size: 1.4em;
+            font-size: 1.3em;
             color: #555;
             font-style: italic;
         }
         .content-item p {
+            font-size: 1.4em;            
             margin-bottom: 1.5em;
-            font-size: 1.3em;
         }
 
     }  
