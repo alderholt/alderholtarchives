@@ -313,7 +313,7 @@
 
     .content-item{
         width: 85vw; 
-        max-width: 900px; /* Keeps sections from being too wide */
+        max-width: 1200px; /* Keeps sections from being too wide */
         background-color: white;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -397,7 +397,7 @@
         }   
 
         .content-item figcaption {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #555;
             font-style: italic;
         }
@@ -452,12 +452,12 @@
         }
 
         .content-item p {
-            font-size: 1.4em;            
-            margin-bottom: 1.5em;
+            font-size: 1.5em;            
+            margin-bottom: 1.4em;
         }
 
         .content-item figcaption {
-            font-size: 1.3em;
+            font-size: 1.4em;
             color: #555;
             font-style: italic;
         }
