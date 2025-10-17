@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Font Size Tester</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      background: #f0f0f0;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5em;
+    }
+    #sampleText {
+      transition: font-size 0.2s ease;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Live Font Size Test</h1>
+  <label for="fontSlider">Font Size: <span id="fontValue">16</span>px</label><br>
+  <input type="range" id="fontSlider" min="10" max="40" value="16">
+  <p id="sampleText">This is sample text. Adjust the slider to test font rendering across browsers.</p>
+
+  <script>
+    const slider = document.getElementById('fontSlider');
+    const sampleText = document.getElementById('sampleText');
+    const fontValue = document.getElementById('fontValue');
+
+    slider.addEventListener('input', () => {
+      const size = slider.value;
+      sampleText.style.fontSize = size + 'px';
+      fontValue.textContent = size;
+    });
+  </script>
+</body>
+</html>
