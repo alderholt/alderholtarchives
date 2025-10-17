@@ -1,11 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Font Size Tester</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Font Unit Tester</title>
   <style>
+    :root {
+      font-size: 16px; /* 1rem = 16px baseline */
+    }
     body {
       font-family: sans-serif;
       margin: 2em;
@@ -16,34 +18,42 @@
       margin-bottom: 1rem;
     }
     p {
-      font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 1.5em;
     }
     #sampleText {
       transition: font-size 0.2s ease;
     }
-    label {
-      font-weight: bold;
+    .metrics {
+      margin-top: 1em;
+      font-family: monospace;
+      background: #fff;
+      padding: 1em;
+      border-radius: 6px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <h1>Live Font Size Test</h1>
+  <h1>Font Size Unit Tester</h1>
   <label for="fontSlider">Font Size: <span id="fontValue">16</span>px</label><br>
-  <input type="range" id="fontSlider" min="10" max="40" value="16">
-  <p id="sampleText">This is sample text. Adjust the slider to test font rendering across browsers.</p>
+  <input type="range" id="fontSlider" min="10" max="40" value="16" />
+  
+  <p id="sampleText">This is sample text. Adjust the slider to test font rendering and unit conversions.</p>
+
+  <div class="metrics">
+    <div><strong>Pixels:</strong> <span id="pxVal">16</span>px</div>
+    <div><strong>Rem:</strong> <span id="remVal">1.00</span>rem</div>
+    <div><strong>VW:</strong> <span id="vwVal">--</span>vw</div>
+  </div>
 
   <script>
     const slider = document.getElementById('fontSlider');
     const sampleText = document.getElementById('sampleText');
     const fontValue = document.getElementById('fontValue');
+    const pxVal = document.getElementById('pxVal');
+    const remVal = document.getElementById('remVal');
+    const vwVal = document.getElementById('vwVal');
 
-    slider.addEventListener('input', () => {
-      const size = slider.value;
-      sampleText.style.fontSize = size + 'px';
-      fontValue.textContent = size;
-    });
-  </script>
-</body>
-</html>
+    function updateMetrics(sizePx) {
+      const
