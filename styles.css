@@ -39,8 +39,13 @@
         text-align: center;
     }
 
+    p {
+        font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+        line-height: 1.6;
+    }
+
     .larger-text {
-        font-size: 1.2em; /* Adjust the size as needed */
+        font-size: clamp(1.2em, 5vw + 0.5rem, 2.5em)
     }
     
 /* End Default*/  
@@ -58,7 +63,7 @@
 
     .top-bar .call {
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
         font-weight: bold;
         font-style: italic;
         color: #77949C;
@@ -91,7 +96,7 @@
     header .strapline {
         text-align: center;
         font-style: italic;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
         margin-right: 20px;  /* Push email link 20px away from right edge */
     }
 
@@ -172,7 +177,7 @@
         width: 80vw; /* Set a maximum width for the text */
         max-width: 768px; /* Set a maximum width for the centered box */
         font-style: italic;
-        font-size: 1.2em;
+        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
         text-align: center;
         /*text-align: left;*/
         /*background: white;*/
@@ -334,11 +339,11 @@
     }
 
     .content-item p {
-        font-size: 1.3em;
+        font-size: clamp(1em, 0.8vw + 0.9em, 1.3em);
         margin-bottom: 1.2em;
     }
     .content-item figcaption {
-        font-size: 1.2em;
+        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
         color: #555;
         font-style: italic;
     }
@@ -375,7 +380,7 @@
 
 /* Media queries */
 
-    @media (max-width: 900px) {
+    @media only screen (max-width: 900px) {
 
         .feature-container {
             flex-direction: column;
@@ -385,32 +390,13 @@
         .feature-item {
             width: 90%; /* Adjust width to ensure it is properly centered */
             max-width: 600px;
-        }             
-
-        .larger-text {
-            font-size: 1.1em; /* Adjust the size as needed */
-        }
-
-        .content-item p {
-            font-size: 1.7em;  
-            margin-bottom: 1.3em;  
-        }   
-
-        .content-item figcaption {
-            font-size: 1.5em;
-            color: #555;
-            font-style: italic;
-        }
-          
+        } 
     } 
 
-    @media (max-width: 768px) {
-        .larger-text {
-            font-size: 1.0em; /* Adjust the size as needed */
-        }
+    @media only screen (max-width: 768px) {
 
-        .top-bar .call {
-            font-size: 1rem;
+        .top-bar .call { /*Check if needed on gFcare */
+            font-size: clamp(0.9rem, 0.8vw + 0.8rem, 1rem);
         }
 
         header {
@@ -424,9 +410,6 @@
 
         header .mobile-strapline {
             display: block; /* Show on mobile */
-            text-align: center;
-            font-style: italic;
-            font-size: 1.2rem;
         }
 
         header .strapline {
@@ -438,7 +421,7 @@
         }            
 
         .intro-title {
-           font-size: 0.7em;   /* Change font size  on mobile */
+          /* font-size: 0.7em;   Change font size  on mobile */
         }            
         
         .intro-icon {
@@ -449,17 +432,6 @@
 
         .cf-turnstile {
             width: 200px; 
-        }
-
-        .content-item p {
-            font-size: 2.0em;            
-            margin-bottom: 1.4em;
-        }
-
-        .content-item figcaption {
-            font-size: 1.8em;
-            color: #555;
-            font-style: italic;
         }
     }  
 /* end media queries */
