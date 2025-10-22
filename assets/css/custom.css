@@ -87,7 +87,7 @@
     }
 
     .content-item img {
-        max-width: 100%;
+        max-width: 50vw;
         display: block;
         margin: 3rem auto 1.5rem;
         border-radius: 8px;
@@ -101,10 +101,11 @@
     }
 
     .content-item blockquote {
+        max-width: 50vw;
         background: #f0f0f0;
         border-left: 4px solid #ccc;
         padding: 0.5em 1em;
-        margin: 1em 0;
+        margin: 1em auto;
         font-style: italic;
     }   
 
